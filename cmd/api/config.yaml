@@ -1,0 +1,20 @@
+
+
+app:
+  name: kieuro-online-shop
+  port: ":4000"
+  encryption:
+    salt: 10
+    jwt_secret: iniCumaSecretToken
+
+db:
+  host: localhost
+  port: 5432
+  name: onlineshop
+  user: postgres
+  password: postgres
+  connection_pool:
+    max_idle_connection: 10
+    max_open_connection: 30
+    max_lifetime_connection: 60 #second
+    max_idletime_connection: 60 #second
