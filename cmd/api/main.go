@@ -2,6 +2,7 @@ package main
 
 import (
 	"kieuro-online-shop/apps/auth"
+	"kieuro-online-shop/apps/product"
 	"kieuro-online-shop/external/database"
 	"kieuro-online-shop/internal/config"
 	"log"
@@ -30,6 +31,7 @@ func main() {
 	})
 
 	auth.Init(router, db)
+	product.Init(router, db)
 
 	router.Listen(config.Cfg.App.Port)
 }
